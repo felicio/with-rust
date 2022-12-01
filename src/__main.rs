@@ -11,6 +11,13 @@ use waku_bindings::{
     WakuNodeHandle,
 };
 
+#[derive(Debug)]
+struct PrettyMessage {
+    timestamp: String,
+    nick: String,
+    message: String,
+}
+
 const NODES: &[&str] = &[
     // "/dns4/node-01.ac-cn-hongkong-c.wakuv2.test.statusim.net/tcp/30303/p2p/16Uiu2HAkvWiyFsgRhuJEb9JfjYxEkoHLgnUQmr1N5mKWnYjxYRVm",
     "/dns4/node-01.do-ams3.wakuv2.test.statusim.net/tcp/30303/p2p/16Uiu2HAmPLe7Mzm8TsYUubgCAW1aJoeFScxrLj8ppHFivPo97bUZ",
@@ -74,6 +81,19 @@ fn main() {
     if !history.is_empty() {
         *messages.write().unwrap() = history;
     }
+
+    let result = messages
+        .read()
+        .unwrap()
+        .iter()
+        .map(|message| PrettyMessage {
+            timestamp: message.timestamp().format("%d-%m-%y %H:%M").to_string(),
+            nick: message.nick().to_string(),
+            message: message.message(),
+        })
+        .collect::<Vec<PrettyMessage>>();
+
+    println!("{:?}", result);
 
     // Stop
     node_handle.stop();
