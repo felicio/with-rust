@@ -1,5 +1,4 @@
 use chrono::{DateTime, TimeZone, Utc};
-// use chrono::Utc;
 use once_cell::sync::Lazy;
 use prost::Message;
 use waku_bindings::{Encoding, WakuContentTopic};
@@ -38,7 +37,6 @@ impl Chat2Message {
     }
 
     pub fn timestamp(&self) -> DateTime<Utc> {
-        // Utc.timestamp(self.timestamp as i64, 0)
         Utc.timestamp_opt(self.timestamp as i64, 0).unwrap()
     }
 }

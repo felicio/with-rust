@@ -1,7 +1,6 @@
 mod protocol;
 
 use crate::protocol::{Chat2Message, TOY_CHAT_CONTENT_TOPIC};
-// use chrono::{TimeZone, Utc};
 use chrono::Utc;
 use crossterm::{
     event::{self, DisableMouseCapture, EnableMouseCapture, Event, KeyCode},
@@ -198,7 +197,7 @@ fn run_app<B: Backend>(
                             buff,
                             TOY_CHAT_CONTENT_TOPIC.clone(),
                             1,
-                            Utc::now().timestamp() as usize,
+                            Utc::now().timestamp_nanos() as usize,
                         );
                         if let Err(e) =
                             app.node_handle
@@ -297,9 +296,6 @@ fn ui<B: Backend>(f: &mut Frame<B>, app: &App) {
             let content = vec![Spans::from(Span::raw(format!(
                 "[{} - {}]: {}",
                 message.timestamp().format("%d-%m-%y %H:%M"),
-                // Utc.timestamp_opt(1431648000, 0)
-                //     .unwrap()
-                //     .format("%d-%m-%y %H:%M"),
                 message.nick(),
                 message.message()
             )))];
