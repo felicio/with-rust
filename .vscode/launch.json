@@ -15,7 +15,8 @@
       // note: accessible after cargo build
       "program": "${workspaceFolder}/target/debug/${workspaceFolderBasename}",
       "args": [],
-      "cwd": "${workspaceFolder}"
+      "cwd": "${workspaceFolder}",
+      "console": "internalConsole"
     }
   ]
 }
