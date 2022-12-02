@@ -995,9 +995,17 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 
 [[package]]
+name = "status-bindings"
+version = "0.1.0"
+source = "git+https://github.com/felicio/status-rust-bindings.git?rev=eda31cf#eda31cfdbe556958cfdc34317b604882dbfad901"
+dependencies = [
+ "status-sys",
+]
+
+[[package]]
 name = "status-sys"
 version = "0.1.0"
-source = "git+https://github.com/felicio/status-rust-bindings.git?rev=752125b#752125b068f773428e2218e701d4b236d0cbc0fd"
+source = "git+https://github.com/felicio/status-rust-bindings.git?rev=eda31cf#eda31cfdbe556958cfdc34317b604882dbfad901"
 dependencies = [
  "bindgen",
 ]
@@ -1010,9 +1018,9 @@ checksum = "6bdef32e8150c2a081110b42772ffe7d7c9032b606bc226c8260fd97e0976601"
 
 [[package]]
 name = "syn"
-version = "1.0.104"
+version = "1.0.105"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "4ae548ec36cf198c0ef7710d3c230987c2d6d7bd98ad6edc0274462724c585ce"
+checksum = "60b9b43d45702de4c839cb9b51d9f529c5dd26a4aff255b42b1ebc03e88ee908"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -1386,7 +1394,7 @@ dependencies = [
  "crossterm",
  "once_cell",
  "prost",
- "status-sys",
+ "status-bindings",
  "tui",
  "unicode-width",
  "waku-bindings",
