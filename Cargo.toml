@@ -6,7 +6,14 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-waku-bindings = "0.1.0-beta1"
+status-sys = { git = "https://github.com/felicio/status-rust-bindings.git", rev = "752125b" }
+waku-bindings = { git = "https://github.com/waku-org/waku-rust-bindings.git", rev = "3f85a09" }
+#status-sys = { git = "file:///Users/felicio/Projects/waku-org/status-rust-bindings", rev = "752125b" }
+#waku-bindings = { git = "file:///Users/felicio/Projects/waku-org/waku-rust-bindings", rev = "3f85a09" }
+#waku-bindings = { git = "file:///Users/felicio/Projects/waku-org/waku-rust-bindings", tag = "foo" }
+#waku-bindings = { git = "file:///Users/felicio/Projects/waku-org/waku-rust-bindings", branch = "foo" }
+#waku-bindings = { git = "file:///Users/felicio/Projects/waku-org/waku-rust-bindings" }
+#waku-bindings = "0.1.0-beta1"
 tui = "0.19"
 crossterm = "0.25"
 unicode-width = "0.1"
