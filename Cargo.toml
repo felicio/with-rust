@@ -6,8 +6,8 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-status-bindings = { git = "https://github.com/felicio/status-rust-bindings.git", rev = "eda31cf" }
-#status-bindings = { git = "file:///Users/felicio/Projects/waku-org/status-rust-bindings", branch = "debug-build" }
+status-bindings = { git = "https://github.com/felicio/status-rust-bindings.git", rev = "3c8fab0" }
+#status-bindings = { git = "file:///Users/felicio/Projects/waku-org/status-rust-bindings", branch = "debug-flags" }
 #status-sys = { git = "https://github.com/felicio/status-rust-bindings.git", rev = "752125b" }
 #status-sys = { git = "file:///Users/felicio/Projects/waku-org/status-rust-bindings", rev = "752125b" }
 waku-bindings = { git = "https://github.com/waku-org/waku-rust-bindings.git", rev = "3f85a09" }
