@@ -997,7 +997,7 @@ checksum = "a2eb9349b6444b326872e140eb1cf5e7c522154d69e7a0ffb0fb81c06b37543f"
 [[package]]
 name = "status-bindings"
 version = "0.1.0"
-source = "git+https://github.com/felicio/status-rust-bindings.git?rev=3c8fab0#3c8fab0f2fa7f870c6e65349c5feba9761376332"
+source = "git+https://github.com/felicio/status-rust-bindings.git?rev=3b45688#3b45688a5f1c5f6bb412445a85147f1a68be3d9f"
 dependencies = [
  "status-sys",
 ]
@@ -1005,7 +1005,7 @@ dependencies = [
 [[package]]
 name = "status-sys"
 version = "0.1.0"
-source = "git+https://github.com/felicio/status-rust-bindings.git?rev=3c8fab0#3c8fab0f2fa7f870c6e65349c5feba9761376332"
+source = "git+https://github.com/felicio/status-rust-bindings.git?rev=3b45688#3b45688a5f1c5f6bb412445a85147f1a68be3d9f"
 dependencies = [
  "bindgen",
 ]
