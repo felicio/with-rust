@@ -87,7 +87,11 @@ fn main() {
         .unwrap()
         .iter()
         .map(|message| PrettyMessage {
-            timestamp: message.timestamp().format("%d-%m-%y %H:%M").to_string(),
+            timestamp: message
+                .timestamp()
+                .unwrap()
+                .format("%d-%m-%y %H:%M")
+                .to_string(),
             nick: message.nick().to_string(),
             message: message.message(),
         })
